@@ -1,3 +1,26 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+
 html {
     box-sizing: border-box;
 }
@@ -10,12 +33,21 @@ body {
     background-color: white;
     -webkit-font-smoothing: antialiased;
     font-family: 'Roboto', sans-serif;
+    line-height: 1;
 }
-/* Top Navigation */
+ol, ul {
+    list-style: none;
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Top Navigation Section*/
 
 .top-navigation {
     background-color: #fff;
     position: fixed;
+    width: 100%;
+    z-index: 9999;
     top: 0px;
     left: 0px;
     right: 0px;
@@ -64,7 +96,7 @@ a:hover {
     color: #4c5058;
     font-weight: 500;
 }
-/* introdution */
+/* Introdution Section*/
 
 .introduction {
     background-image: url('../images/karma-background.jpg');
@@ -73,6 +105,7 @@ a:hover {
     background-size: cover;
     height: 45.938rem;
     padding-top: 280px;
+    overflow: auto;
 }
 .introduction .content {
     height: 70px;
@@ -98,46 +131,148 @@ a:hover {
     background: #F15C0E;
     font-size: 24px;
 }
-/*case*/
 
+/**
+ The Three Case Images
+ */
+
+.cases {
+    background-color: #fff;
+    overflow: hidden;
+    padding-bottom: 5rem;
+}
 .cases .content {
-    color: #272821;
+    margin-top: 7.875rem;
+    color: #1D1E21;
     text-align: center;
-    padding: 70px 0;
+    padding: none;
 }
 .cases .content h1 {
     font-weight: lighter;
     margin-bottom: 70px;
 }
-.cases .content .info img {
-    display: inline-block;
-    width: 125px;
-    margin: 0 40px;
+.cases .content h3 {
+    font-weight: 400;
+    font-size: 1.563rem;
+    margin: 2.5rem 0px 1.875rem;
+}
+.cases .devices > li{
+    margin: 0 20px; 
     float: left;
     text-align: center;
-
+    color:#1D1E21;
+    display: inline-block;
+    width: 33.3333333%;
+}
+.content{
+    padding: 0 0.938rem;
+    margin: 0 auto;
+    min-width: 37.5rem;
 }
 
 
 
+/**
+ * Footer
+ */
+.social {
+    background-color: #fff;
+    overflow: auto;
+    padding-bottom: 9.375rem;
+    text-align: center;
+}
+.social hr {
+    border: 0;
+    border-top: 1px solid #eaebec;
+    margin: 1.313rem 0;
+}
+hr {
+    display: block;
+    -webkit-margin-before: 0.5em;
+    -webkit-margin-after: 0.5em;
+    -webkit-margin-start: auto;
+    -webkit-margin-end: auto;
+}
+h5{
+    color: #272821;
+}
+.social .icons > li {
+    border-radius: 1.25rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-block;
+    margin: 1.25rem 5px;
+    border: 1px solid #eaebec;
+    padding: 0.625rem 0;
+    text-align: center;
+}
+.social .icons > li:hover {
+    cursor: pointer;
+}
+.social .twitter {
+    color: #55acee;
+}
+.social .facebook {
+    color: #4c66a4;
+}
+.social .instagram {
+    color: #3f729b;
+}
+.social .copy {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #838994;
+}
 
 
 
+/**
+ * Responsive Design
+ */
+@media (min-width: 48rem) {
+    .content {
+        width: 46rem;
+    }
+}
+@media (min-width: 62rem) {
+    .content {
+        width: 60rem;
+    }
+}
+@media (min-width: 75rem) {
+    .content {
+        width: 60%;
+    }
+}
+
+/* Chrome, Safari, Opera */ 
+@-webkit-keyframes bounce {
+    0%, 100% {margin-top: 0px;}
+    50% {margin-top: 2rem;}
+}
+/* Standard syntax */ 
+@keyframes bounce {
+    0%, 100% {margin-top: 0px;}
+    50% {margin-top: 2rem;}
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/**
+ * button
+ */
+button {
+    width: 9.688rem;
+    background-color: #f15a29;
+    border-color: #f15a29;
+    text-shadow: none;
+    border-style: none;
+    border-radius: 4px;
+    padding: 1rem 1.5rem;
+    color: white;
+    font-size: 1.125rem;
+}
+button:hover {
+    background-color: #d9400e;
+    border-color: #cf3d0e;
+    cursor: pointer;
+}
